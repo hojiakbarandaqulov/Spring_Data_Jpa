@@ -1,0 +1,66 @@
+### Create student
+POST localhost:8081/student/create
+Content-Type: application/json
+
+{
+  "name": "BB10",
+  "surname": "Malov",
+  "level": 1,
+  "age": 22,
+  "gender": "Woman",
+  "createdDate": "2023-12-12"
+}
+
+### Get all
+GET localhost:8081/student/all
+
+### Get name,surname,level,age,gender,createdDate
+GET localhost:8081/student/name/BB/Akbarjons/1/21/Male/2023-12-12
+
+### Put
+PUT localhost:8081/student/update/10
+Content-Type: application/json
+
+{
+  "name": "Muzaffar",
+  "surname": "Andaqulov",
+  "level": 2,
+  "age": "13",
+  "gender": "Male",
+  "createdDate": "2020-11-12"
+}
+
+### Delete id
+DELETE localhost:8081/student/delete/19
+
+### Given Date
+GET localhost:8081/student/givenDate/2023-12-12
+
+### Get between
+GET localhost:8081/student/between/2023-12-12/2025-11-11
+
+
+### Pagination
+GET localhost:8081/student/pagination?page=3&size=3
+
+
+### PaginationLevelSort
+GET localhost:8081/student/pagination/4?page=0&size=10
+
+
+### PaginationCreatedDate
+GET localhost:8081/student/pagination/2023-12-12
+
+### FilterWithPagination
+POST localhost:8081/student/filter?page=3&size=3
+Content-Type: application/json
+
+{
+  "name": "BB8",
+  "surname": "Malov"
+}
+
+
+
+
+
